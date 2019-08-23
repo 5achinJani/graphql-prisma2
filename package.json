@@ -1,5 +1,5 @@
 {
-  "name": "graphql-auth",
+  "name": "graphql-prisma2",
   "license": "MIT",
   "scripts": {
     "postinstall": "typesync",
