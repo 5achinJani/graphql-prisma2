@@ -1,0 +1,73 @@
+{
+  "name": "graphql-auth",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "typesync",
+    "start": "yarn dev",
+    "seed": "ts-node prisma/seed.ts",
+    "gen-schema": "prisma2 generate",
+    "db-save": "prisma2 lift save --name",
+    "db-migrate": "prisma2 lift up",
+    "predev": "yarn gen-schema",
+    "dev": "backpack --inspect",
+    "prebuild": "yarn gen-schema",
+    "build": "backpack build",
+    "prettify": "prettier --write **/*.{js,ts,json}"
+  },
+  "lint-staged": {
+    "*.{js,ts,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {},
+  "eslintConfig": {
+    "parser":  "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ],
+    "env": {
+      "node": true
+    }
+  },
+  "dependencies": {
+    "@prisma/nexus": "^0.0.1",
+    "app-root-path": "^2.2.1",
+    "bcrypt": "3.0.6",
+    "dotenv": "^8.1.0",
+    "graphql-shield": "6.0.5",
+    "graphql-yoga": "1.18.2",
+    "jsonwebtoken": "8.5.1",
+    "nexus": "0.12.0-beta.6",
+    "prisma2": "^2.0.0-preview-7"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/bcrypt": "3.0.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/extra-watch-webpack-plugin": "^1.0.0",
+    "@types/jsonwebtoken": "8.3.2",
+    "@types/node": "^12.0.10",
+    "@types/prettier": "^1.18.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "backpack-core": "^0.8.4",
+    "eslint": "^6.2.1",
+    "extra-watch-webpack-plugin": "^1.0.3",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "1.0.0-pre.40",
+    "typescript": "3.5.2",
+    "typesync": "^0.6.1"
+  }
+}
