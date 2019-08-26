@@ -1,5 +1,5 @@
-import { config } from 'dotenv'
-config()
+import { config } from "dotenv";
+config();
 import { nexusPrismaPlugin } from "@generated/nexus-prisma";
 import Photon from "@generated/photon";
 import { makeSchema } from "@prisma/nexus";
@@ -43,7 +43,7 @@ const schema = makeSchema({
 const server = new GraphQLServer({
   schema,
   middlewares: [permissions],
-  context: (request: Context) => {
+  context: (request: Context): Context => {
     return {
       ...request,
       photon,

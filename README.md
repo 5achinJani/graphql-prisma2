@@ -12,12 +12,11 @@
 - **[VSCode nodejs debugging config](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)**: With backpack
 - **[typesync](https://github.com/jeffijoe/typesync)**: Install missing TypeScript typings for dependencies in your package.json. Automatically runs after `yarn` (postinstall)
 
+## References
 
-# Things to add:
+- **[ESlint & Prettier with VSCode config](https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb)** by [Robert Cooper](https://github.com/robertcoopercode)
+
+## Things to add:
 
 - CI/CD config
 - and more useful stuff.
-
-
-
-

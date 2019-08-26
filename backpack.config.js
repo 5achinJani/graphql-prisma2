@@ -1,4 +1,3 @@
-const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 module.exports = {
   webpack: (config, options, webpack) => {
     config.entry.main = ["./src/index.ts"];
@@ -10,11 +9,6 @@ module.exports = {
       test: /\.ts$/,
       loader: "ts-loader"
     });
-    // config.plugins.push(
-    //   new ExtraWatchWebpackPlugin({
-    //     files: ["src/**/*.graphql"]
-    //   })
-    // );
 
     return config;
   }
