@@ -1,2 +1,5 @@
 #temp fix. @todo Can be fixed by adding overrides in eslint config
 backpack.config.js
+dist
+build
+generated

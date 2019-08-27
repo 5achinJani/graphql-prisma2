@@ -12,7 +12,8 @@
     "dev": "backpack --inspect",
     "prebuild": "yarn gen-schema",
     "build": "backpack build",
-    "prettify": "prettier --write **/*.{js,ts,json}"
+    "prettify": "prettier --write **/*.{js,ts,json}",
+    "lint": "eslint **/*.ts"
   },
   "lint-staged": {
     "*.{js,ts,json,css,md}": [
@@ -27,7 +28,7 @@
   },
   "prettier": {},
   "eslintConfig": {
-    "parser":  "@typescript-eslint/parser",
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
       "ecmaVersion": 6
     },
