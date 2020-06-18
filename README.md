@@ -1,3 +1,4 @@
+#### Outdated: includes outdated early prisma2 version. 
 # Highlights
 
 - **[TypeScript](https://www.typescriptlang.org/):** Nuff said.
